@@ -37,3 +37,6 @@ asciidoctor -o output/mybook.html master.adoc
 ## Learn more
 
 - [Quick guide on syntaxes](http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/)
+
+
+![Sample](./sample.png)
