@@ -1,17 +1,18 @@
 = eBook Template
-:author: Vysakh Sreenivasan
-:email:  email@server.com
+:author: Bruno Rocha
+:email: email@server.com
 :revnumber: 1.0
-:revdate:   January 1st, 2012
+:revdate: January 1st, 2021
 :doctype: book
 :toc:
-:icons:
+:icons: font
 :data-uri:
 :lang: en
-:language: javadocript
+:language: python
 
 [preface]
 include::chapters/about.adoc[]
+
 include::chapters/preface.adoc[]
 
 == Introduction

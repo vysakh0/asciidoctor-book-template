@@ -1,28 +1,39 @@
-Template for Writing an eBook
-=============================
+# Template for Writing an eBook
 
 - Has book template(asciidoc) for creating html, pdf, epub/mobi.
 - Uses [asciidoctor](http://asciidoctor.org) to make the book.
 - See `master.adoc`
 
 
-Installation
-------------
+## Edit
+
 
 ```bash
-git clone git://github.com/vysakh0/asciidoctor-book-template.git
+git clone git://github.com/rochacbruno/asciidoctor-book-template.git
 cd asciidoctor-book-template
-bundle
-rake
+vim master.doc chapters/about.adoc chapters/preface.adoc
 ```
 
-Usage
------
+Once all your files are edited.
 
-- Use `rake ascii` to build html, pdf, epub files for your master.adoc
-- Outputs will be generated under the _output_ directory.
 
-Roll on
--------
+## Generate the book
+
+```bash
+docker run -it -v $PWD:/documents/ asciidoctor/docker-asciidoctor
+
+# Inside docker container bash
+
+# PDF
+asciidoctor-pdf -o output/mybook.pdf master.adoc
+
+# EPUB
+asciidoctor-epub3 -o output/mybook.epub master.adoc
+
+# HTML
+asciidoctor -o output/mybook.html master.adoc
+```
+
+## Learn more
+
 - [Quick guide on syntaxes](http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/)
-- Start editing, adding the  `about`, `preface`, `chapters` and others.
