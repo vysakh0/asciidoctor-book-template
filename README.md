@@ -34,6 +34,12 @@ asciidoctor-epub3 -o output/mybook.epub master.adoc
 asciidoctor -o output/mybook.html master.adoc
 ```
 
+## Auto run on every file change
+
+```bash
+find . -name '*.adoc' | entr docker run --rm -v $PWD:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -o output/mybook.pdf master.adoc 
+```
+
 ## Learn more
 
 - [Quick guide on syntaxes](http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/)
